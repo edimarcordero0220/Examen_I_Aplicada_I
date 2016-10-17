@@ -26,5 +26,13 @@ namespace BLL
                 throw ex;
             }
         }
+        public static Usuarios Buscar(int ClienteId)
+
+        {
+            RegistroClienteDb db = new RegistroClienteDb();
+
+            return db.Usuario.Find(ClienteId);
+
+        }
     }
 }

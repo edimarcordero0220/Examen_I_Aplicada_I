@@ -18,30 +18,23 @@ namespace Examen_I_Aplicada_I
         {
             InitializeComponent();
         }
-
         private void LlenarClase(Usuarios u)
         {
-            //u.ClienteId = ClientetextBox.Text;
             u.Nombre = NombretextBox.Text;
-            u.FechaNacimiento = FechaNacimientotextBox.Text;
-            u.limiteCredit = LimiteCreditotextBox.Text;
+            u.FechaNacimiento = FechatextBox.Text;
+            u.limiteCredit = LimitetextBox.Text;
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Usuarios usuario = new Usuarios();
 
             LlenarClase(usuario);
             UsuariosBLL.Insertar(usuario);
-            MessageBox.Show("Guardado Jevi!!");
-        }
-        private void NombretextBox_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void IdtextBox_TextChanged(object sender, EventArgs e)
-        {
-
+            MessageBox.Show("Guardado Jevi!!")
         }
     }
+    
 }
+
